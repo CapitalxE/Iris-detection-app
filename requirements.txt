@@ -3,5 +3,5 @@ scikit-learn
 fastapi
 uvicorn
 imbalanced-learn
-pip install --upgrade scikit-learn
-pip install --upgrade imbalanced-learn
+upgrade scikit-learn
+upgrade imbalanced-learn
