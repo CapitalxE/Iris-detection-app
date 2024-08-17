@@ -2,10 +2,9 @@ import numpy as np
 import pickle
 import streamlit as st
 import requests
-import joblib
 
     
-loaded_model = joblib.load("trained_model.sav")
+loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 def iris_prediction(input_data):
     global loaded_model
     print("Inside iris_prediction. Model loaded successfully? ", loaded_model is not None)
