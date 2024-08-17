@@ -1,6 +1,6 @@
 numpy
 pickleshare
-streamlit
+streamlit==1.37.1
 scikit-learn==1.2.2
 fastapi
 uvicorn
