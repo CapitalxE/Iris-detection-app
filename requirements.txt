@@ -1,5 +1,5 @@
 streamlit==1.37.1
-scikit-learn
+scikit-learn==1.5.1
 fastapi
 uvicorn
-
+imbalanced-learn
