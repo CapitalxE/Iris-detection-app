@@ -16,7 +16,7 @@ try:
 except Exception as e:
     print(f"Error loading model: {e}")
     
-
+loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 def iris_prediction(input_data):
     global loaded_model
     
@@ -24,7 +24,7 @@ def iris_prediction(input_data):
     
     input_reshape = input_as_numpy.reshape(1,-1)
     
-    pred= loaded_model.predict(input_reshape)
+    pred=loaded_model.predict(input_reshape)
     print(pred)
     
     if (pred[0]==0):
