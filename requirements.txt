@@ -2,6 +2,4 @@ streamlit==1.37.1
 scikit-learn
 fastapi
 uvicorn
-imbalanced-learn
-upgrade scikit-learn
-upgrade imbalanced-learn
+
