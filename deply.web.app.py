@@ -8,7 +8,7 @@ model_url = "https://github.com/CapitalxE/Iris-detection-app/blob/689a6cb2212e2c
 try:
     response = requests.get(model_url)
     if response.status_code == 200:
-        loaded_model = pickle.loads(response.content)
+    loaded_model = pickle.load(response.content)
         print("Model loaded successfully!")
     else:
         print(f"Error downloading model. Status code: {response.status_code}")
