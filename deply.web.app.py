@@ -19,6 +19,7 @@ except Exception as e:
 loaded_model = pickle.load(open("trained_model.sav", 'rb'))
 def iris_prediction(input_data):
     global loaded_model
+    print("Inside iris_prediction. Model loaded successfully? ", loaded_model is not None)
     
     input_as_numpy = np.asarray(input_data)
     
