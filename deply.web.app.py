@@ -16,7 +16,7 @@ except Exception as e:
     print(f"Error loading model: {e}")
 
 def iris_prediction(input_data):
-    
+    global loaded_model
     
     input_as_numpy = np.asarray(input_data)
     
