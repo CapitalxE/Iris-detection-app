@@ -16,7 +16,7 @@ try:
 except Exception as e:
     print(f"Error loading model: {e}")
     
-loaded_model = pickle.load(open("trained_model.sav", 'rb'))
+loaded_model = pickle.load(open("https://github.com/CapitalxE/Iris-detection-app/blob/4b1958c34c42a2d12f6a1cfe9256811d60d1d727/trained_model.sav", 'rb'))
 
 def iris_prediction(input_data):
     global loaded_model
