@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import requests
 
-model_url = "https://github.com/CapitalxE/Iris-detection-app/raw/main/trained_model.sav"
+model_url = "https://github.com/CapitalxE/Iris-detection-app/blob/689a6cb2212e2c047afa86854a7489aaf96774c0/trained_model.sav"
 
 try:
     response = requests.get(model_url)
