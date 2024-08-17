@@ -3,20 +3,20 @@ import pickle
 import streamlit as st
 import requests
 
-model_url = "https://github.com/CapitalxE/Iris-detection-app/blob/689a6cb2212e2c047afa86854a7489aaf96774c0/trained_model.sav"
+model_url = "trained_model.sav"
 
 try:
     response = requests.get(model_url)
     if response.status_code == 200:
         
-        loaded_model = pickle.load(response.content)
+        loaded_model = pickle.loads(response.content)
         print("Model loaded successfully!")
     else:
         print(f"Error downloading model. Status code: {response.status_code}")
 except Exception as e:
     print(f"Error loading model: {e}")
     
-loaded_model = pickle.load(open("https://github.com/CapitalxE/Iris-detection-app/blob/4b1958c34c42a2d12f6a1cfe9256811d60d1d727/trained_model.sav", 'rb'))
+loaded_model = pickle.loads(open("trained_model.sav", 'rb'))
 
 def iris_prediction(input_data):
     global loaded_model
