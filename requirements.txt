@@ -3,4 +3,4 @@ streamlit==1.37.1
 scikit-learn
 fastapi
 uvicorn
-pickle
+
