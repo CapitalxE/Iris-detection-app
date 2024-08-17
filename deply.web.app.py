@@ -22,7 +22,7 @@ def iris_prediction(input_data):
     
     input_reshape = input_as_numpy.reshape(1,-1)
     
-    pred= load_model.predict(input_reshape)
+    pred= loaded_model.predict(input_reshape)
     print(pred)
     
     if (pred[0]==0):
