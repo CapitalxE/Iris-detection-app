@@ -9,12 +9,13 @@ try:
     response = requests.get(model_url)
     if response.status_code == 200:
         
-        loaded_model = pickle.loads(response.content)
+        loaded_model = pickle.load(response.content)
         print("Model loaded successfully!")
     else:
         print(f"Error downloading model. Status code: {response.status_code}")
 except Exception as e:
     print(f"Error loading model: {e}")
+
 
 def iris_prediction(input_data):
     global loaded_model
