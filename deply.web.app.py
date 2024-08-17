@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-load_model=pickle.load(open("trained_model.sav",'rb'))
+load_model=pickle.load(open("https://github.com/CapitalxE/Iris-detection-app/blob/4069d4a9d066df1b398384a1bbb8c04d673eab0c/trained_model.sav",'rb'))
 
 
 def iris_prediction(input_data):
