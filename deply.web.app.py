@@ -1,30 +1,20 @@
 import numpy as np
 import pickle
 import streamlit as st
-import requests
 
-model_url = "trained_model.sav"
 
-try:
-    response = requests.get(model_url)
-    if response.status_code == 200:
-        loaded_model = pickle.loads(response.content)
-        print("Model loaded successfully!")
-    else:
-        print(f"Error downloading model. Status code: {response.status_code}")
-except Exception as e:
-    print(f"Error loading model: {e}")
 
-    
+load_model=pickle.load(open(r"trained_model.sav",'rb'))
+
+
 def iris_prediction(input_data):
-    global loaded_model
-    print("Inside iris_prediction. Model loaded successfully? ", loaded_model is not None)
+    
     
     input_as_numpy = np.asarray(input_data)
     
     input_reshape = input_as_numpy.reshape(1,-1)
     
-    pred=loaded_model.predict(input_reshape)
+    pred= load_model.predict(input_reshape)
     print(pred)
     
     if (pred[0]==0):
